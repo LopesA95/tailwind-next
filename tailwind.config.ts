@@ -1,11 +1,14 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+/** @type {import('tailwindcss').NextConfig} **/
+module.exports = {
   content: ['./src/**/*.tsx'],
   theme: {
     extend: {
       gridTemplateColumns: {
         app: 'minmax(18rem, 20rem) 1fr',
+        profile: 'max-content 1fr max-content',
+      },
+      maxWidth: {
+        app: '700px',
       },
       colors: {
         anderson: '#8257e6',
@@ -14,4 +17,3 @@ const config: Config = {
   },
   plugins: [],
 }
-export default config
